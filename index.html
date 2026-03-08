@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2BHK Budget Home - Idikarai</title>
+<title>Modern 2BHK Villa - Idikarai</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -40,7 +40,7 @@ top:0;
 left:0;
 right:0;
 bottom:0;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.5);
 }
 
 .hero-content{
@@ -48,6 +48,7 @@ position:relative;
 color:white;
 text-align:center;
 max-width:700px;
+animation:floatHero 4s ease-in-out infinite;
 }
 
 .hero h1{
@@ -55,12 +56,18 @@ font-size:48px;
 margin-bottom:10px;
 }
 
-.price{
-font-size:34px;
-color:#22c55e;
-font-weight:600;
-margin-bottom:20px;
+.hero p{
+font-size:20px;
+opacity:.9;
 }
+
+@keyframes floatHero{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0px);}
+}
+
+/* BUTTON */
 
 .cta{
 background:#25D366;
@@ -70,6 +77,14 @@ text-decoration:none;
 color:white;
 font-weight:600;
 font-size:18px;
+display:inline-block;
+margin-top:20px;
+transition:all .3s ease;
+}
+
+.cta:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* CONTAINER */
@@ -77,12 +92,12 @@ font-size:18px;
 .container{
 max-width:1200px;
 margin:auto;
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .section-title{
-font-size:32px;
-margin-bottom:30px;
+font-size:34px;
+margin-bottom:40px;
 text-align:center;
 }
 
@@ -90,16 +105,22 @@ text-align:center;
 
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .feature{
 background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+padding:30px;
+border-radius:14px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
 text-align:center;
+transition:all .35s ease;
+}
+
+.feature:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
 }
 
 /* GALLERY */
@@ -113,6 +134,11 @@ gap:20px;
 .gallery img{
 width:100%;
 border-radius:12px;
+transition:transform .4s ease;
+}
+
+.gallery img:hover{
+transform:scale(1.06);
 }
 
 /* DETAILS */
@@ -120,15 +146,57 @@ border-radius:12px;
 .details{
 background:white;
 padding:40px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+border-radius:14px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
 line-height:2;
+font-size:17px;
 }
 
 .location{
 text-align:center;
 margin-top:40px;
 font-size:20px;
+}
+
+/* COMMUNITY CTA */
+
+.community-cta{
+background:linear-gradient(135deg,#2563eb,#1e40af);
+color:white;
+text-align:center;
+padding:80px 20px;
+margin-top:80px;
+}
+
+.community-cta h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.community-cta p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+opacity:.95;
+}
+
+.community-btn{
+display:inline-block;
+margin-top:30px;
+background:#22c55e;
+color:white;
+padding:16px 34px;
+border-radius:40px;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+transition:.3s;
+}
+
+.community-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 30px rgba(0,0,0,0.35);
 }
 
 /* WHATSAPP FLOAT */
@@ -148,42 +216,13 @@ font-size:32px;
 color:white;
 text-decoration:none;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
+animation:pulse 2s infinite;
 }
 
-/* COMMUNITY CTA */
-
-.community-cta{
-background:linear-gradient(135deg,#2563eb,#1e40af);
-color:white;
-text-align:center;
-padding:70px 20px;
-margin-top:60px;
-}
-
-.community-cta h2{
-font-size:32px;
-margin-bottom:15px;
-}
-
-.community-cta p{
-max-width:700px;
-margin:auto;
-font-size:18px;
-line-height:1.6;
-opacity:0.95;
-}
-
-.community-btn{
-display:inline-block;
-margin-top:25px;
-background:#22c55e;
-color:white;
-padding:16px 32px;
-border-radius:40px;
-text-decoration:none;
-font-size:18px;
-font-weight:600;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6);}
+70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
 /* FOOTER */
@@ -205,13 +244,9 @@ margin-top:60px;
 
 <div class="hero-content">
 
-<h1>Budget 2BHK Home</h1>
+<h1>Modern 2BHK Villa</h1>
 
-<div class="price">₹55L (Negotiable)</div>
-
-<p>DTCP Approved Property</p>
-
-<br>
+<p>Premium Construction • DTCP Approved</p>
 
 <a class="cta" href="https://wa.me/918148127587?text=Hi I am interested in the Idikarai 2BHK house">
 Contact on WhatsApp
@@ -229,13 +264,13 @@ Contact on WhatsApp
 <div class="features">
 
 <div class="feature">📐 Land Area<br><b>1170 Sqft</b></div>
-<div class="feature">🏠 Builtup<br><b>1100 Sqft</b></div>
+<div class="feature">🏠 Built-up Area<br><b>1100 Sqft</b></div>
 <div class="feature">🛏 2 Bedrooms</div>
 <div class="feature">🚿 2 Attached Bathrooms</div>
 <div class="feature">🚗 Portico 9×23</div>
 <div class="feature">💧 7000L Water Sump</div>
 <div class="feature">💦 Individual Borewell</div>
-<div class="feature">📍 DTCP Approved</div>
+<div class="feature">📍 DTCP Approved Layout</div>
 
 </div>
 
@@ -308,7 +343,7 @@ and real house-building insights.
 
 
 <footer>
-Budget 2BHK House | Idikarai | Maniyakaranpalayam
+Modern 2BHK Villa | Idikarai | Maniyakaranpalayam
 </footer>
 
 </body>
