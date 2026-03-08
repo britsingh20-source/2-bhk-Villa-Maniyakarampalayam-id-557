@@ -3,91 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2BHK Budget Home – Idikarai</title>
+
+<title>2BHK Budget Home - Idikarai</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f6f6f6;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#f4f6f9;
 color:#222;
 }
 
-header{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:40px 20px;
+.hero{
+height:90vh;
+background:url("images/elevation.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
 }
 
-header h1{
-font-size:32px;
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+position:relative;
+color:white;
+text-align:center;
+max-width:700px;
+}
+
+.hero h1{
+font-size:48px;
 margin-bottom:10px;
 }
 
 .price{
-font-size:28px;
+font-size:34px;
 color:#22c55e;
-font-weight:bold;
+font-weight:600;
+margin-bottom:20px;
 }
 
-.hero{
-width:100%;
-height:420px;
-background-size:cover;
-background-position:center;
+.cta{
+background:#25D366;
+padding:16px 28px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:600;
+font-size:18px;
 }
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
-padding:30px 20px;
+padding:60px 20px;
 }
 
 .section-title{
-font-size:26px;
-margin-bottom:20px;
-font-weight:bold;
+font-size:32px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align:center;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
 .gallery img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 }
 
-.specs{
+.details{
 background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-line-height:1.8;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+line-height:2;
 }
 
-.specs strong{
-color:#0f172a;
-}
-
-.cta{
+.location{
 text-align:center;
-margin-top:30px;
+margin-top:40px;
+font-size:20px;
 }
 
-.whatsapp-btn{
-display:inline-block;
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
 background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
 color:white;
-padding:16px 28px;
-font-size:18px;
-border-radius:8px;
 text-decoration:none;
-font-weight:bold;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* COMMUNITY CTA */
+
+.community-cta{
+background:linear-gradient(135deg,#2563eb,#1e40af);
+color:white;
+text-align:center;
+padding:70px 20px;
+margin-top:60px;
+}
+
+.community-cta h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.community-cta p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+opacity:0.95;
+}
+
+.community-btn{
+display:inline-block;
+margin-top:25px;
+background:#22c55e;
+color:white;
+padding:16px 32px;
+border-radius:40px;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 footer{
@@ -95,7 +179,7 @@ background:#0f172a;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
+margin-top:60px;
 }
 
 </style>
@@ -103,58 +187,50 @@ margin-top:40px;
 
 <body>
 
-<header>
+<section class="hero">
 
-<h1>Are you Looking for a Budget Home?</h1>
-<div class="price">2BHK Home – ₹55L (Negotiable)</div>
+<div class="hero-content">
 
-<p>Idikarai, Maniyakaranpalayam</p>
+<h1>Budget 2BHK Home</h1>
 
-</header>
+<div class="price">₹55L (Negotiable)</div>
 
+<p>DTCP Approved Property</p>
 
-<div class="hero" style="background-image:url('images/elevation.jpg')"></div>
+<br>
 
-
-<div class="container">
-
-<div class="section-title">Property Details</div>
-
-<div class="specs">
-
-<strong>Facing:</strong> South Face Site<br>
-<strong>Main Door:</strong> East Face<br>
-<strong>Approval:</strong> DTCP Approved<br>
-<strong>Land Area:</strong> 2.75 Cents (1170 Sqft)<br>
-<strong>Buildup Area:</strong> 1100 Sqft<br>
-<strong>Plot Size:</strong> 23 × 48<br>
-<strong>Back Side Area:</strong> 52.25<br>
-<strong>Water Sump:</strong> 7000 Litres<br>
-<strong>Borewell:</strong> Individual Borewell<br>
+<a class="cta" href="https://wa.me/918148127587?text=Hi I am interested in the Idikarai 2BHK house">
+Contact on WhatsApp
+</a>
 
 </div>
 
+</section>
 
-<br><br>
 
-<div class="section-title">Room Dimensions</div>
+<section class="container">
 
-<div class="specs">
+<h2 class="section-title">Property Highlights</h2>
 
-<strong>Portico:</strong> 9 × 23<br>
-<strong>Hall:</strong> 10 × 17<br>
-<strong>Bedroom 1:</strong> 10 × 16<br>
-<strong>Attached Bathroom:</strong> 4.5 × 6<br>
-<strong>Bedroom 2:</strong> 10 × 16<br>
-<strong>Attached Bathroom:</strong> 4.5 × 6<br>
-<strong>Kitchen:</strong> 8 × 12<br>
+<div class="features">
+
+<div class="feature">📐 Land Area<br><b>1170 Sqft</b></div>
+<div class="feature">🏠 Builtup<br><b>1100 Sqft</b></div>
+<div class="feature">🛏 2 Bedrooms</div>
+<div class="feature">🚿 2 Attached Bathrooms</div>
+<div class="feature">🚗 Portico 9×23</div>
+<div class="feature">💧 7000L Water Sump</div>
+<div class="feature">💦 Individual Borewell</div>
+<div class="feature">📍 DTCP Approved</div>
 
 </div>
 
+</section>
 
-<br><br>
 
-<div class="section-title">Property Gallery</div>
+<section class="container">
+
+<h2 class="section-title">House Gallery</h2>
 
 <div class="gallery">
 
@@ -168,33 +244,61 @@ margin-top:40px;
 
 </div>
 
+</section>
 
-<div class="cta">
 
-<br><br>
+<section class="container">
 
-<a class="whatsapp-btn"
-href="https://wa.me/918148127587?text=Hi%20I%20am%20interested%20in%20the%202BHK%20house%20in%20Idikarai"
-target="_blank">
+<h2 class="section-title">Room Dimensions</h2>
 
-📲 Contact on WhatsApp
+<div class="details">
 
+Plot Size : 23 × 48<br>
+Back Side Area : 52.25<br>
+Portico : 9 × 23<br>
+Hall : 10 × 17<br>
+Bedroom 1 : 10 × 16<br>
+Attached Bath : 4.5 × 6<br>
+Bedroom 2 : 10 × 16<br>
+Attached Bath : 4.5 × 6<br>
+Kitchen : 8 × 12<br>
+
+</div>
+
+<div class="location">
+📍 Location: Idikarai, Maniyakaranpalayam
+</div>
+
+</section>
+
+
+<!-- COMMUNITY CTA -->
+
+<section class="community-cta">
+
+<h2>Want to Learn How Quality Homes Are Built?</h2>
+
+<p>
+We regularly post videos showing how to build strong and high-quality homes.
+Join our community to learn construction tips, materials selection,
+and real house-building insights.
+</p>
+
+<a href="YOUR_COMMUNITY_LINK" class="community-btn">
+🏡 Join Our Home Building Community
 </a>
 
-</div>
+</section>
 
 
-</div>
+<a class="whatsapp-float" href="https://wa.me/918148127587">
+💬
+</a>
 
 
 <footer>
-
-Budget 2BHK Property – Idikarai, Maniyakaranpalayam  
-<br>
-Direct Owner Listing
-
+Budget 2BHK House | Idikarai | Maniyakaranpalayam
 </footer>
-
 
 </body>
 </html>
